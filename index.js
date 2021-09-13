@@ -24,8 +24,9 @@ app.use(express.static("public"))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-const server = app.listen(port, function() {
+app.listen(port, function() {
     console.log("App listening at port "  + port);
+    wakeUpDyno(dynoUrl);
 });
 
 const myHelpers = {
@@ -58,9 +59,6 @@ handlebars.registerHelper("minus", myHelpers.minusHelper)
 
 const wakeUpDyno = require('./keepAwake.js')
 const dynoUrl = process.env.DYNO_URL;
-app.listen(port, function() {
-    wakeUpDyno(dynoUrl);
-});
 
 /* ---------------------------------------- ROUTES ---------------------------------------- */
 app.get("/", function(req, res) {

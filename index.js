@@ -63,24 +63,28 @@ const dynoUrl = process.env.DYNO_URL;
 /* ---------------------------------------- ROUTES ---------------------------------------- */
 app.get("/", function(req, res) {
     res.render("page", {
+        title: "Home",
         image: "home.png"
     });
 })
 
 app.get("/reasons_to_use", function(req, res) {
     res.render("page", {
+        title: "Reasons to Use",
         image: "reasons_to_use.png"
     });
 })
 
 app.get("/best_practices", function(req, res) {
     res.render("page", {
+        title: "Best Practices",
         image: "best_practices.png"
     });
 })
 
 app.get("/references", function(req, res) {
     res.render("page", {
+        title: "References",
         image: "references.png"
     });
 })

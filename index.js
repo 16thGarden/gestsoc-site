@@ -4,10 +4,8 @@ const exphandle = require("express-handlebars")
 const handlebars = require("handlebars")
 const bodyParser = require("body-parser")
 
-const router = express.Router();
-
 const app = express();
-const port = 9000;
+const port = process.env.PORT || 8888;
 
 app.engine("hbs", exphandle({
     extname: "hbs",

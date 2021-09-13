@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm i && node index.js",
+    "start": "node index.js",
     "start-delay": "node index.js delay",
-    "dev": "nodemon index.js",
-    "test": "node addData.js && mocha --exit && node addData.js"
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",

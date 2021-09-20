@@ -68,6 +68,20 @@ app.get("/", function(req, res) {
     });
 })
 
+app.get("/social_problem", function(req, res) {
+  res.render("page", {
+      title: "Social Problem",
+      image: "social_problem.png"
+  });
+})
+
+app.get("/philippine_context", function(req, res) {
+  res.render("page", {
+      title: "Philippine Context",
+      image: "philippine_context.png"
+  });
+})
+
 app.get("/reasons_to_use", function(req, res) {
     res.render("page", {
         title: "Reasons to Use",
